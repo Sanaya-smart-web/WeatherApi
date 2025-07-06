@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Explorer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="bg-gray-50">
+    <div
+      class="p-5 w-full bg-cover bg-center min-h-screen"
+      style="background-image: url('background6.jpeg')"
+    >
+      <h1
+        class="font-sans font-bold text-sky-200 text-center text-3xl md:text-4xl lg:text-4xl tracking-wide"
+      >
+        <i
+          class="fas fa-cloud text-sky-300 text-3xl md:text-4xl lg:text-4xl"
+        ></i>
+
+        Weather Explorer
+
+        <i
+          class="fas fa-sun text-yellow-400 text-3xl md:text-4xl lg:text-4xl"
+        ></i>
+      </h1>
+
+      <div
+        class="max-w-4xl w-full py-12 px-6 sm:px-20 md:px-16 mx-auto my-12 rounded-2xl bg-gray-100/70 shadow-lg"
+      >
+        <!-- Search -->
+        <div class="flex flex-col md:flex-row gap-3 w-full">
+          <input
+            id="Input"
+            type="text"
+            placeholder="Enter a city name..."
+            class="flex-1 px-4 py-2 border-2 border-sky-600 rounded-full w-full bg-stone-100/40"
+          />
+          <button
+            id="Btn"
+            class="px-6 py-2 text-white text-lg bg-sky-600 rounded-full"
+          >
+            Search
+          </button>
+        </div>
+
+        <!-- Weather Info -->
+        <div
+          class="mt-8 flex flex-col sm:flex-row sm:items-center gap-8 text-center sm:text-left justify-center"
+        >
+          <h2 id="Name" class="font-bold text-3xl text-gray-800/60"></h2>
+          <h2 id="Tempirature" class="font-bold text-4xl text-sky-600"></h2>
+          <img id="Icon" />
+        </div>
+        <p
+          id="Error"
+          class="text-red-500 text-xl font-bold mt-2 text-center"
+        ></p>
+        <!-- Cards -->
+        <div
+          class="px-5 sm:px-8 md:px-10 lg:px-16 mt-10 flex flex-col md:flex-row gap-5"
+        >
+          <!-- Description -->
+          <div
+            class="flex-1 border-2 border-cyan-100/50 rounded-2xl min-h-[240px] p-4 text-center shadow-lg bg-white/60"
+          >
+            <i
+              class="fa-solid fa-info text-4xl md:text-5xl text-sky-600/70 mt-2"
+            ></i>
+            <h3 class="mt-6 text-sky-600/70 text-xl font-bold">Description</h3>
+            <h3
+              id="Description"
+              class="mt-6 text-gray-500 text-xl font-bold"
+            ></h3>
+          </div>
+
+          <!-- Wind -->
+          <div
+            class="flex-1 border-2 border-cyan-100/50 rounded-2xl min-h-[240px] bg-white/60 p-4 text-center shadow-lg"
+          >
+            <i
+              class="fa-solid fa-wind text-4xl md:text-5xl text-sky-600/70 mt-2"
+            ></i>
+            <h3 class="mt-6 text-sky-600/70 text-xl font-bold">Wind</h3>
+            <h3 id="Wind" class="mt-6 text-gray-500 text-xl font-bold"></h3>
+          </div>
+
+          <!-- Humidity -->
+          <div
+            class="flex-1 border-2 border-cyan-100/50 rounded-2xl min-h-[240px] bg-white/60 p-4 text-center shadow-lg"
+          >
+            <i
+              class="fas fa-tint text-4xl md:text-5xl text-sky-600/70 mt-2"
+            ></i>
+            <h3 class="mt-6 text-sky-600/70 text-xl font-bold">Humidity</h3>
+            <h3 id="Humidity" class="mt-6 text-gray-500 text-xl font-bold"></h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
